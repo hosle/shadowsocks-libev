@@ -340,6 +340,36 @@ make && make install
 
 ## Usage
 
+```
+ssserver -p 443 -k password -m aes-256-cfb
+```
+
+To run in the background:
+
+```
+sudo ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start
+```
+
+To stop:
+
+```
+sudo ssserver -d stop
+```
+
+To check the log:
+
+```
+sudo less /var/log/shadowsocks.log
+```
+
+Check all the options via -h. You can also use a [Configuration] file instead.
+
+If you installed the snap package, you have to prefix the commands with shadowsocks., like this:
+
+```
+shadowsocks.ssserver -p 443 -k password -m aes-256-cfb
+```
+
 For a detailed and complete list of all supported arguments, you may refer to the
 man pages of the applications, respectively.
 
